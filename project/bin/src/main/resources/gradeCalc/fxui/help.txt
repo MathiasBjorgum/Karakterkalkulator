@@ -1,0 +1,13 @@
+Dette er en applikasjon som beregner karaktersnitt. Dersom du er student ved NTNU er inntastingen veldig enkelt! Det eneste du trenger å gjøre er å taste inn fagkode og karakter så henter applikasjonen ut data fra grades.no sitt API.
+
+For å fjerne et fag fra listen skriver du inn fagkoden i "Fagkode"-feltet. Dersom fagkoden finnes i registeret vil "registrer"-knappen endre seg til "fjern".
+
+Alle filer generert av dnne applikasjonen blir lagret i user.home/GradeCalculator.
+
+I applikasjonen er det to forskjellige metoder å lagre filer på.
+
+Det ene er tekstbasert, som innebærer at informasjonen blir lagret som en fil av typen NAME.reg. Denne filen er en tekstlig representasjon av registeret.
+
+Det andre er ved hjelp av java sitt Serializable interface. Da blir objektene i sin helhet lagret til fil i NAME.regs. Denne filen er imidlertid ikke så lett å lese manuelt.
+
+All lesing til og fra fil, samt feilmeldinger, er lagret i log.txt under 'GradeCalculator/Log/log.txt'. Den kan også vises ved å trykke på knappen 'Les log'.

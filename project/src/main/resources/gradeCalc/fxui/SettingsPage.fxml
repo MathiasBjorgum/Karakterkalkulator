@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gradeCalc.fxui.GradeCalcSettingsController">
+   <children>
+      <Line endX="-1.0" endY="455.0" layoutX="326.0" layoutY="126.0" startX="-1.0" startY="-125.0" />
+      <VBox layoutX="330.0" prefHeight="581.0" prefWidth="320.0">
+         <children>
+            <Text fx:id="HelpHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="----- HJELP -----" textAlignment="CENTER" wrappingWidth="313.8046875" />
+            <Text fx:id="helpText" strokeType="OUTSIDE" strokeWidth="0.0" text="(Placeholder)" wrappingWidth="313.8046875" />
+         </children></VBox>
+      <VBox layoutX="6.0" layoutY="1.0" prefHeight="581.0" prefWidth="320.0">
+         <children>
+            <HBox prefHeight="202.0" prefWidth="320.0">
+               <children>
+                  <Pane prefHeight="97.0" prefWidth="316.0">
+                     <children>
+                        <Text layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hva vil du sortere på?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox fx:id="choiceBoxSort" layoutX="224.0" layoutY="36.0" prefHeight="25.0" prefWidth="92.0" />
+                        <ChoiceBox fx:id="choiceBoxSort1" layoutX="224.0" layoutY="64.0" prefHeight="25.0" prefWidth="92.0" />
+                        <Text layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stigende eller synkende?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-----Sorteringsmetoder-----" textAlignment="CENTER" wrappingWidth="299.13671875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children></HBox>
+            <HBox prefHeight="202.0" prefWidth="320.0">
+               <children>
+                  <Pane prefHeight="97.0" prefWidth="319.0">
+                     <children>
+                        <Button fx:id="saveButton" layoutX="160.0" layoutY="71.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="154.0" text="Lagre til fil" />
+                        <Button fx:id="importButton" layoutY="71.0" mnemonicParsing="false" onAction="#load" prefHeight="25.0" prefWidth="154.0" text="Importer fra fil" />
+                        <Text layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hvilken filhåndtering vil du bruke?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox fx:id="choiceBoxFileHandler" layoutX="222.0" layoutY="36.0" prefHeight="25.0" prefWidth="92.0" />
+                        <Text layoutX="10.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-----Filhåndtering-----" textAlignment="CENTER" wrappingWidth="299.13671875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children></HBox>
+            <HBox prefHeight="202.0" prefWidth="320.0">
+               <children>
+                  <Pane prefHeight="97.0" prefWidth="317.0">
+                     <children>
+                        <TextField fx:id="registerNameTxtField" layoutX="65.0" layoutY="36.0" prefHeight="25.0" prefWidth="188.0" promptText="register" />
+                        <Text layoutX="9.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-----Navn på register-----" textAlignment="CENTER" wrappingWidth="299.13671875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children></HBox>
+            <HBox prefHeight="202.0" prefWidth="320.0">
+               <children>
+                  <Pane prefHeight="97.0" prefWidth="316.0">
+                     <children>
+                        <ImageView fitHeight="107.0" fitWidth="145.0" layoutX="86.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo_transparent.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+               </children></HBox>
+            <HBox prefHeight="202.0" prefWidth="320.0">
+               <children>
+                  <Pane prefHeight="97.0" prefWidth="317.0">
+                     <children>
+                        <Button fx:id="clearRegister" layoutX="65.0" layoutY="34.0" mnemonicParsing="false" onAction="#clearRegister" prefHeight="25.0" prefWidth="188.0" text="SLETT REGISTER" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteAll" layoutX="65.0" layoutY="68.0" mnemonicParsing="false" onAction="#deleteAll" prefHeight="25.0" prefWidth="188.0" text="Slett ALT" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="readLogButton" layoutX="82.0" layoutY="2.0" mnemonicParsing="false" onAction="#readLog" prefHeight="25.0" prefWidth="154.0" text="Les log" />
+                     </children>
+                  </Pane>
+               </children></HBox>
+            <HBox prefHeight="202.0" prefWidth="320.0">
+               <children>
+                  <Pane prefHeight="97.0" prefWidth="323.0">
+                     <children>
+                        <Button fx:id="backButton" layoutX="-5.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleBackButton" text="Tilbake" />
+                        <Button fx:id="resetSettings" layoutX="65.0" layoutY="7.0" mnemonicParsing="false" onAction="#resetSettings" prefHeight="25.0" prefWidth="188.0" text="Tilbakestill instillinger" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</Pane>
